@@ -9,7 +9,7 @@ import Control.Selective
 import Data.Bifunctor
 
 newtype Parser a = Parser
-  { unParser :: String -> Maybe (a, String)
+  { unParser :: String -> [(a, String)]
   }
 
 instance Functor Parser where
