@@ -42,6 +42,7 @@ library
                       , selective
                       , text
   exposed-modules:      CmdOpts
+                        CmdOpts.Parser
                         CmdOpts.Source
   other-modules:        Paths_cmdopts
   autogen-modules:      Paths_cmdopts
