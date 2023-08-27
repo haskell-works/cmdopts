@@ -5,9 +5,10 @@ module CmdOpts.Source
 
 import Data.Text (Text)
 
-newtype Source = Source
+data Source = Source
   { original :: [Text]
+  , remaining :: [Maybe Text]
   } deriving (Eq, Show)
 
 mkSource :: [Text] -> Source
-mkSource = Source
+mkSource args = Source args (Just <$> args)
