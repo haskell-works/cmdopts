@@ -28,6 +28,7 @@ common hedgehog                   { build-depends: hedgehog                   >=
 common hspec                      { build-depends: hspec                      >= 2.4        && < 3      }
 common hw-hspec-hedgehog          { build-depends: hw-hspec-hedgehog          >= 0.1        && < 0.2    }
 common selective                  { build-depends: selective                  >= 0.7        && < 0.8    }
+common text                       { build-depends: text                       >= 2          && < 3      }
 
 common cmdopts
   build-depends:        cmdopts
@@ -39,7 +40,9 @@ common config
 library
   import:               base, config
                       , selective
+                      , text
   exposed-modules:      CmdOpts
+                        CmdOpts.Source
   other-modules:        Paths_cmdopts
   autogen-modules:      Paths_cmdopts
   hs-source-dirs:       src

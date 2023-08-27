@@ -5,11 +5,13 @@ module CmdOpts
   ( Parser(..)
   ) where
 
+import CmdOpts.Source
+
 import Control.Selective
 import Data.Bifunctor
 
 newtype Parser a = Parser
-  { unParser :: String -> [(a, String)]
+  { unParser :: Source -> [(a, Source)]
   }
 
 instance Functor Parser where
